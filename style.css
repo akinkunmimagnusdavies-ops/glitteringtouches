@@ -118,7 +118,7 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .hamburger{ display:block; color:black; }
   .gallery{ grid-template-columns:repeat(2,1fr); width: auto; height: auto;}
   .hero{ background: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)), url(images/G-LOGO-100.png); }
-  .hero h1{ font-size:28px; }
+  .hero h1{ font-size:20px; }
   .grid{ grid-template-columns:repeat(2,1fr); gap:12px; }
   .card img{ height:140px; }
   #book h2{

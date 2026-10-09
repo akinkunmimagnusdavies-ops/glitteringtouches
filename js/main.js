@@ -64,7 +64,7 @@ function updateCartUI(){
   const total = cart.reduce((sum,i)=>sum+i.price*i.qty,0);
   cartTotalSpan.innerText = total.toLocaleString();
   
-  const waText = `Hi LAWLAH_PRO, I want to order:\n${cart.map(c=>`- ${c.name} x${c.qty}`).join('\n')}\nTotal: ₦${total.toLocaleString()}`;
+  const waText = `Hi GLITTERING TOUCHES, I am placing an order for:\n${cart.map(c=>`- ${c.name} x${c.qty}`).join('\n')}\nTotal: ₦${total.toLocaleString()}`;
   document.getElementById('checkoutWA').href = `https://wa.me/2349156002887?text=${encodeURIComponent(waText)}`;
 }
 
@@ -115,6 +115,6 @@ document.getElementById('waDirect').addEventListener('click', function(){
   let service = document.getElementById('service').value || "makeup service";
   let address = document.getElementById('address').value || "";
   let loc = document.querySelector('input[name="location"]:checked').value;
-  let text = `Hi LAWLAH_PRO! I'm ${name} from ${address} (${loc}), I want to book ${service}.`;
+  let text = `Hi GLITTERING TOUCHES! I'm ${name} from ${address} (${loc}), I want to book ${service}.`;
   this.href = `https://wa.me/2349156002887?text=${encodeURIComponent(text)}`;
 });

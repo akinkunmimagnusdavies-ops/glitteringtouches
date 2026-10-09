@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLITTERING TOUCHES | Premium Makeup Studio in Lagos</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div><a href="index.html"><img class="logo" src="images/G-LOGO.png" width="60" height="60" alt="logo"></a></div>
+    <h2>GLITTERING TOUCHES</h2>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#cart" class="cart-icon">🛒 <span id="cartCount">0</span></a></li>
+    </ul>
+  </nav>
+
+<div class="hero" id="home">
+  <h1><span>Premium</span> Makeup Studio <br>Trending Products, <span>Top </span>deals.</h1>
+</div>
+
+<section id="shop">
+  <h2 style="text-align:left; margin-bottom:20px;">Shop Now</h2>
+  <div class="grid">
+    <div class="card" data-id="1" data-name="10 Piece Makeup Brush Set" data-price="17000">
+      <img src="images/product-1.jpg" alt="products">
+      <fieldset>
+        <p><b>10 Piece Makeup Brush Set</b></p>
+        <p><small>Color: Beige/Pink</small></p>
+        <p><small>Price: <span class="slash">N20,000</span></small></p>
+        <p><small>Now N17,000</small></p>
+      </fieldset>
+      <button class="ATC">Add to Cart</button>
+    </div>
+    <div class="card" data-id="2" data-name="Luxury Designer Mascara" data-price="3500">
+      <img src="images/product-2.jpg" alt="products">
+      <fieldset>
+        <p><b>Luxury Designer Mascara</b></p>
+        <p><small>Color: Black</small></p>
+        <p><small>Price: <span class="slash">N4,000</span></small></p>
+        <p><small>Now N3,500</small></p>
+      </fieldset>
+      <button class="ATC">Add to Cart</button>
+    </div>
+    <div class="card" data-id="3" data-name="Luxury Pressed Powder" data-price="5400">
+      <img src="images/product-3.jpg" alt="products">
+      <fieldset>
+        <p><b>Luxury Pressed Powder</b></p>
+        <p><small>Color: Various</small></p>
+        <p><small>Price: <span class="slash">N6,000</span></small></p>
+        <p><small>Now N5,400</small></p>
+      </fieldset>
+      <button class="ATC">Add to Cart</button>
+    </div>
+    <div class="card" data-id="4" data-name="Luxury Designer Lipsticks" data-price="3200">
+      <img src="images/product-4.jpg" alt="products">
+      <fieldset>
+        <p><b>Luxury Designer Lipsticks</b></p>
+        <p><small>Color: Various</small></p>
+        <p><small>Price: <span class="slash">N4,000</span></small></p>
+        <p><small>Now N3,200</small></p>
+      </fieldset>
+      <button class="ATC">Add to Cart</button>
+    </div>
+    <div class="card" data-id="5" data-name="24hrs Matte Foundation" data-price="14000">
+      <img src="images/product-5.jpg" alt="products">
+      <fieldset>
+        <p><b>24hrs Matte Foundation</b></p>
+        <p><small>Color: Various</small></p>
+        <p><small>Price: <span class="slash">N15,000</span></small></p>
+        <p><small>Now N14,000</small></p>
+      </fieldset>
+      <button class="ATC">Add to Cart</button>
+    </div>
+    <div class="card" data-id="6" data-name="Luxury Starter Makeup Set" data-price="12000">
+      <img src="images/product-6.jpg" alt="products">
+      <fieldset>
+        <p><b>Luxury Starter Makeup Set</b></p>
+        <p><small>Color: Black</small></p>
+        <p><small>Items: 6</small></p>
+        <p><small>Price: <span>N12,000</span></small></p>
+      </fieldset>
+      <button class="ATC">Add to Cart</button>
+    </div>
+  </div>
+ 
+  <!-- Simple Cart Display -->
+  <div id="cartBox" style="display:none; margin-top:30px; background:#fffbe6; border:2px solid #ffcc00; padding:20px; border-radius:12px;">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p><b>Total: ₦<span id="cartTotal">0</span></b></p>
+    <a id="checkoutWA" href="#" target="_blank" style="display:inline-block; background:#25D366; color:#fff; padding:10px 20px; border-radius:8px; text-decoration:none; margin-top:10px;">Checkout on WhatsApp</a>
+  </div>
+</section>
+
+<section id="gallery" style="background:#151515">
+  <h2 style="text-align:center">Gallery</h2>
+  <div class="gallery" style="margin-top:20px">
+    <img src="images/IMG-3.png" alt="makeup">
+    <img src="images/IMG-4.png" alt="makeup">
+    <img src="images/IMG-3.png" alt="makeup">
+    <img src="images/IMG-4.png" alt="makeup">
+    <img src="images/IMG-5.png" alt="makeup">
+    <img src="images/IMG-6.png" alt="makeup">
+    <img src="images/IMG-5.png" alt="makeup">
+    <img src="images/IMG-6.png" alt="makeup">
+  </div>
+</section>
+
+<section id="book">
+  <h2 style="text-align:center">HOME SERVICE <span>BOOKING FORM</span></h2>
+  <form id="bookingForm" action="https://formspree.io/f/mrpbqwgw" method="POST">
+    <input type="text" name="name" id="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" id="phone" placeholder="Your Phone" required>
+    <input type="text" name="address" id="address" placeholder="Your Address" required>
+
+    <!-- RADIO OPTIONS YOU ASKED FOR -->
+    <div class="location-box">
+        <p class="location-title">Service Location:</p>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="location" value="surulere" checked>
+          <span>Within Surulere</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="location" value="outside">
+          <span>Outside Surulere</span>
+        </label>
+      </div>
+    </div>
+
+    <select name="service" id="service" required>
+      <option value="">Select Service</option>
+    </select>
+   
+    <input type="date" name="date" id="date" required>
+    <input type="time" name="time" id="time" required>
+
+    <input type="hidden" name="_subject" value="New GLITTERING TOUCHES Booking!">
+    <input type="text" name="_gotcha" style="display:none">
+    <button class="btn" type="submit" id="bookBtn">Book Now</button>
+    <p id="formStatus" style="text-align:center;margin-top:10px;display:none"></p>
+  </form>
+
+  <div style="text-align:center; margin-top:20px">
+    <p style="color:#888; margin-bottom:10px">Or</p>
+    <a id="waDirect" href="https://wa.me/2349156002887" target="_blank" style="display:inline-block; background:#25D366; color:#fff; padding:14px 28px; border-radius:30px; font-weight:700; text-decoration:none;">
+      Chat on WhatsApp Directly
+    </a>
+    <p style="color:#666; font-size:12px; margin-top:8px">Fastest response • 091234689</p>
+  </div>
+</section>
+
+<footer>
+  <p style="color:#ffcc00;font-weight:700">GLITTERING TOUCHES</p>
+  <p>Makeup Studio • Lagos, Nigeria</p>
+  <p>© <span id="year"></span> GLITTERING TOUCHES • All Rights Reserved</p>
+</footer>
+
+<script src="js/main.js" ></script>
+  
+</body>
+</html>

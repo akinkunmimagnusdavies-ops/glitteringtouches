@@ -1,0 +1,131 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+:root{
+--TXTCLR: #333;
+--YELLOW: #ffcc00;
+--LG-FADED: linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.85));
+--PADD: 12px 5%;
+--BIG-PADD: 60px 5%;
+}
+body{ background:#fff; overflow-x:hidden; }
+.logo{ border-radius:50%; object-fit:cover; }
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: var(--PADD);
+  background:#fff;
+  position:sticky;top:0;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+nav h2{ text-align:center; font-size:18px; text-shadow:1px 1px 1px #ddd; }
+.nav-links{ display:flex; gap:25px; list-style:none; align-items:center; }
+.nav-links a{ color: var(--TXTCLR); text-decoration:none; font-weight:600; font-size:14px; }
+.hamburger{ display:none; font-size:28px; cursor:pointer; user-select:none; }
+.cart-icon{ background:#111; color:#ffcc00 !important; padding:6px 12px; border-radius:20px; }
+
+.hero{ padding: var(--BIG-PADD); text-align:center; background: var(--LG-FADED),url('images/G-LOGO-100.png'); }
+.hero h1{ color:#fff; text-shadow:2px 2px 4px black; font-size:44px; line-height:1.2; }
+.hero span{ color: var(--YELLOW); }
+section{ padding: var(--BIG-PADD); }
+
+/* FIXED GRID - NOW RESPONSIVE */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+  gap:18px;
+}
+.card{
+  border:1px solid #eee;
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  transition:0.2s;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.card:hover{ transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.08); }
+.card img{ width:100%; height:160px; object-fit:cover; }
+.card fieldset{ border:none; padding:10px; flex:1; }
+.card p{ margin:3px 0; font-size:13px; }
+.ATC{
+  list-style:none;
+  background: var(--YELLOW);
+  text-align:center;
+  border-radius:0 0 12px 12px;
+  padding:10px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:12px;
+  border:none;
+  width:100%;
+}
+.slash{ text-decoration: line-through; color:#888; }
+
+.gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.gallery img{ width:100%; object-fit:cover; border-radius:10px; }
+#gallery h2{ color:white; }
+#book h2 span{ font-style:italic; background:#ffcc00; padding:4px 8px; border-radius:4px; color:#000; }
+form{ display:flex; flex-direction:column; gap:12px; max-width:460px; margin:25px auto; background:#1a1a1a; padding:25px; border-radius:15px; }
+.location-box{
+  background:#222;
+  padding:14px;
+  border-radius:8px;
+  color:#fff;
+}
+.location-title{
+  margin-bottom:10px;
+  font-size:14px;
+  font-weight:600;
+}
+.radio-group{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.radio-label{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+  font-size:14px;
+  line-height:1;
+}
+.radio-label input[type="radio"]{
+  width:16px;
+  height:16px;
+  margin:0;
+  accent-color:#ffcc00;
+  cursor:pointer;
+}
+input,select{ padding:12px; border-radius:8px; border:none; outline:none; width:100%; }
+#bookBtn{ background: var(--YELLOW); font-weight:700; cursor:pointer; border:none; padding:12px; border-radius:10px; }
+footer{ background:#000; text-align:center; padding:30px; color:#888; }
+
+@media(max-width:768px){
+  .nav-links{
+    display:none; flex-direction:column; position:absolute; top:72px; right:5%; background:#111;
+    padding:20px; border-radius:12px; width:220px; box-shadow:0 10px 30px rgba(0,0,0,.5); gap:18px;
+  }
+  .nav-links.active{ display:flex; }
+  .nav-links a{ color:white; }
+  .hamburger{ display:block; color:black; }
+  .gallery{ grid-template-columns:repeat(2,1fr); width: auto; height: auto;}
+  .hero{ background: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)), url(images/G-LOGO-100.png); }
+  .hero h1{ font-size:28px; }
+  .grid{ grid-template-columns:repeat(2,1fr); gap:12px; }
+  .card img{ height:140px; }
+  #book h2{
+    font-size: 15px;
+  }
+}
+@media(max-width:480px){
+  .grid{ grid-template-columns:repeat(2,1fr); }
+  nav h2{ font-size:14px; }
+}
